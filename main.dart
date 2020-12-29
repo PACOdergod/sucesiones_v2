@@ -1,18 +1,45 @@
 void main(List<String> args) {
   // n + 4
-  // var sucesion1 = [5, 6, 7, 8, 9];
-  // obtenerDiferencia(sucesion1);
-  var b = [1, 1, 1, 1, 1, 1, 1];
-  var c = comprobarIgualdad(b);
-  comprobarListaL(c);
+  var sucesion1 = [5, 6, 7, 8, 9];
+  // 2n +2
+  var sucesion2 = [4, 6, 8];
+  // var b = obtenerDiferencia(sucesion1);
+  // var b = [1, 1, 1, 1, 1];
+  // var c = comprobarIgualdad(b);
+  // comprobarListaL(c, sucesion1);
+  obtenerFuncionL(sucesion2);
 }
 
-void comprobarListaL(bool b) {
+void obtenerFuncionL(List<int> l) {
+  // int largo = l.length;
+  List<int> d = new List();
+  int n;
+  for (var i = 0; i < l.length; i++) {
+    var r = l[i] - (i + 1);
+    d.add(r);
+    // print(r);
+  }
+  print(d);
+  // print(d[0]);
+  // print(d[1]);
+
+  if (d[0] == d[1]) {
+    // n = d[0];
+    // print("bien");
+    // es una funcion que solo suma
+    print("an = n + ${d[0]}");
+  }
+  if (d[0] != d[1]) {
+    print("funcion dificil");
+  }
+}
+
+void comprobarListaL(bool b, List<int> l) {
   if (b) {
-    print("Es lineal :)");
+    print("Es lineal :) => $l");
   }
   if (!b) {
-    print("No es lineal :(");
+    print("No es lineal :( => $l ");
   }
 }
 
